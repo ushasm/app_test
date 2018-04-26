@@ -1,8 +1,8 @@
 version: '3'
 services:
   consulserver:
-    image: gliderlabs/consul-server:latest
     hostname: consulserver
+    image: gliderlabs/consul-server:latest
     ports:
       - "8300:8300"
       - "8400:8400"
@@ -12,7 +12,6 @@ services:
 
   registrator:
     image: gliderlabs/registrator:master
-    hostname: registrator
     volumes:
       - "/var/run/docker.sock:/tmp/docker.sock"
     command: -internal consul://consulserver:8500
