@@ -23,7 +23,7 @@ Use a service discovery tool for this, like Consul, etcd, Zookeeper or other.
 
 This was quite challenging task for me since I never used any service discovery tool like Consul, ETCd..
 
-I have added a makefile to make the build process easy and the [Output file](https://github.com/ushasm/relayr/blob/initial-setup/output.md)
+I have added a makefile to make the build process easy and the [Output file.](https://github.com/ushasm/relayr/blob/initial-setup/output.md)
 
 1. Clone the repo.
 
