@@ -13,8 +13,6 @@ services:
   registrator:
     image: gliderlabs/registrator:master
     hostname: registrator
-    links:
-      - consulserver:consul
     volumes:
       - "/var/run/docker.sock:/tmp/docker.sock"
     command: -internal consul://consulserver:8500
