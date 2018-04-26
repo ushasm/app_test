@@ -29,26 +29,14 @@ I have added a makefile to make the build process easy.
 
 2. Build the docker-compose file
 ```
-make build
-```
-or
-```
-docker-compose build
+make build / docker-compose build
 ```
 3. Run the Containers
 ```
-make up
-```
-or
-```
-docker-compose up -d
+make up / docker-compose up -d
 ```
 4. Status of the Containers
 ```
-make status
-```
-or
-```
-docker ps
+make status / docker ps
 ```
 5. Browse for http://localhost:3000 to say Hello to the World :)
