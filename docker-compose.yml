@@ -1,0 +1,28 @@
+version: '3'
+services:
+  consulserver:
+    hostname: consulserver
+    image: gliderlabs/consul-server:latest
+    ports:
+      - "8300:8300"
+      - "8400:8400"
+      - "8500:8500"
+      - "53"
+    command: -data-dir /tmp/consul -bootstrap -advertise 127.0.0.1
+
+  registrator:
+    image: gliderlabs/registrator:master
+    volumes:
+      - "/var/run/docker.sock:/tmp/docker.sock"
+    command: -internal consul://consulserver:8500
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+
+  relay_api:
+    build: .
+    image: relay_api:compose
+    ports:
+      - "3000:3000"
