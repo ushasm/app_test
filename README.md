@@ -1,4 +1,4 @@
-# Relayr
+# Application
 
 Objective:
 1. Using docker-compose file, run following docker containers:
